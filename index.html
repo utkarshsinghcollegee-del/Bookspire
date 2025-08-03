@@ -2,172 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bookspire - Discover Great Books</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookspire</title>
   <style>
-    * {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Nunito', sans-serif;
+      background: #f5f5f5;
+      color: #333;
     }
-
-    body {
-      background: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
     header {
-      background-color: #1e40af;
+      background: #4b0082;
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
-
-    nav {
-      background-color: #1e3a8a;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-      background-color: #e0e7ff;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #4b5563;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+    .container {
+      padding: 2rem;
+      max-width: 800px;
       margin: auto;
     }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #1e3a8a;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 2rem;
-    }
-
-    .feature {
-      flex: 1 1 280px;
+    .card {
       background: white;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
     }
-
-    .feature h3 {
-      margin-bottom: 0.5rem;
-      color: #1e40af;
+    .card h2 {
+      color: #4b0082;
+      margin-top: 0;
     }
-
-    footer {
-      background-color: #1e3a8a;
+    .btn {
+      background-color: #4b0082;
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
     }
-
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
+    footer {
+      background: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Bookspire</h1>
-    <p>Your Personal Book Discovery Platform</p>
+    <h1>📚 Bookspire</h1>
+    <p>Your personalized book recommendation assistant</p>
   </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Genres</a>
-    <a href="#">Top Picks</a>
-    <a href="#">My Books</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <section class="hero">
-    <h1>Discover Stories That Inspire</h1>
-    <p>Explore curated book recommendations and never run out of great reads again.</p>
-  </section>
-
-  <section class="section">
-    <h2>Why Bookspire?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Smart Suggestions</h3>
-        <p>Get AI-powered book recommendations based on your interests.</p>
-      </div>
-      <div class="feature">
-        <h3>Track Reading</h3>
-        <p>Manage your reading list and track your progress easily.</p>
-      </div>
-      <div class="feature">
-        <h3>Connect with Readers</h3>
-        <p>Read reviews and share your thoughts with the community.</p>
-      </div>
+  
+  <div class="container">
+    <div class="card">
+      <h2>Discover New Reads</h2>
+      <p>Tell us what you like — genres, authors, or themes — and we’ll recommend books you’ll love!</p>
+      <a href="#" class="btn">Get Recommendations</a>
     </div>
-  </section>
+
+    <div class="card">
+      <h2>Explore by Genre</h2>
+      <p>From thrilling mysteries to heartwarming romances, browse hand-picked selections by category.</p>
+      <a href="#" class="btn">Browse Genres</a>
+    </div>
+
+    <div class="card">
+      <h2>Ask Bookspire</h2>
+      <p>Need help choosing your next read? Chat with our assistant now.</p>
+      <a href="#" class="btn">Start Chat</a>
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 Bookspire. All rights reserved.
   </footer>
 
-  <!-- Watson Assistant Chat Embed -->
   <script>
     window.watsonAssistantChatOptions = {
-      integrationID: "0f8e18ee-0934-47e1-a6c7-022c95e3b15e",
-      region: "eu-de",
-      serviceInstanceID: "1c647a75-9336-4083-ac04-42f96de7777a",
+      integrationID: "5fe3b084-59d6-41d0-a6d7-41984362151f", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "1c647a75-9336-4083-ac04-42f96de7777a", // The ID of your service instance.
       onLoad: async (instance) => { await instance.render(); }
     };
     setTimeout(function(){
       const t=document.createElement('script');
-      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
-        (window.watsonAssistantChatOptions.clientVersion || 'latest') +
-        "/WatsonAssistantChatEntry.js";
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
       document.head.appendChild(t);
     });
   </script>
-
 </body>
 </html>
 
