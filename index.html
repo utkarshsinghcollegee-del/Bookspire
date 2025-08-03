@@ -139,5 +139,35 @@
       <div class="feature">
         <h3>Track Reading</h3>
         <p>Manage your reading list and track your progress easily.</p>
+      </div>
+      <div class="feature">
+        <h3>Connect with Readers</h3>
+        <p>Read reviews and share your thoughts with the community.</p>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    &copy; 2025 Bookspire. All rights reserved.
+  </footer>
+
+  <!-- Watson Assistant Chatbot -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "8f366cde-13df-4c66-b5f0-bc81c01d5d1f",
+      region: "eu-de",
+      serviceInstanceID: "1c647a75-9336-4083-ac04-42f96de7777a",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+</html>
 
