@@ -3,109 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bookspire - Discover Great Books</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <title>Bookspire | Discover Your Next Favorite Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
-
     body {
-      background: #f9fafb;
+      background-color: #f9f9fb;
       color: #1f2937;
-      line-height: 1.6;
     }
-
     header {
-      background-color: #1e40af;
+      background-color: #3b82f6;
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
-
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
     nav {
-      background-color: #1e3a8a;
+      background-color: #2563eb;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 1rem;
+      padding: 1rem 0;
     }
-
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s;
     }
-
     nav a:hover {
-      text-decoration: underline;
+      color: #dbeafe;
     }
-
     .hero {
-      padding: 4rem 2rem;
+      background: #eff6ff;
+      padding: 4rem 1rem;
       text-align: center;
-      background-color: #e0e7ff;
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
+    .hero h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
-
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #4b5563;
     }
-
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #1e3a8a;
-    }
-
     .features {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       gap: 2rem;
-    }
-
-    .feature {
-      flex: 1 1 280px;
+      padding: 3rem 1rem;
       background: white;
+    }
+    .feature {
+      background: #f3f4f6;
       border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 2rem;
+      width: 300px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-
     .feature h3 {
+      color: #2563eb;
       margin-bottom: 0.5rem;
-      color: #1e40af;
     }
-
+    .feature p {
+      color: #374151;
+    }
     footer {
       background-color: #1e3a8a;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -113,37 +94,34 @@
 
   <header>
     <h1>Bookspire</h1>
-    <p>Your Personal Book Discovery Platform</p>
+    <p>Ignite your reading journey</p>
   </header>
 
   <nav>
     <a href="#">Home</a>
+    <a href="#">Recommendations</a>
     <a href="#">Genres</a>
-    <a href="#">Top Picks</a>
-    <a href="#">My Books</a>
+    <a href="#">My List</a>
     <a href="#">Contact</a>
   </nav>
 
   <section class="hero">
-    <h1>Discover Stories That Inspire</h1>
-    <p>Explore curated book recommendations and never run out of great reads again.</p>
+    <h2>Discover, Explore & Love Books</h2>
+    <p>Get personalized recommendations, track your reading, and connect with fellow book lovers.</p>
   </section>
 
-  <section class="section">
-    <h2>Why Bookspire?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Smart Suggestions</h3>
-        <p>Get AI-powered book recommendations based on your interests.</p>
-      </div>
-      <div class="feature">
-        <h3>Track Reading</h3>
-        <p>Manage your reading list and track your progress easily.</p>
-      </div>
-      <div class="feature">
-        <h3>Connect with Readers</h3>
-        <p>Read reviews and share your thoughts with the community.</p>
-      </div>
+  <section class="features">
+    <div class="feature">
+      <h3>Personalized Picks</h3>
+      <p>Receive tailored book suggestions based on your interests.</p>
+    </div>
+    <div class="feature">
+      <h3>Reading Tracker</h3>
+      <p>Keep track of your finished, current, and future reads.</p>
+    </div>
+    <div class="feature">
+      <h3>Community Reviews</h3>
+      <p>See what others are reading and share your own reviews.</p>
     </div>
   </section>
 
@@ -151,7 +129,7 @@
     &copy; 2025 Bookspire. All rights reserved.
   </footer>
 
-  <!-- Watson Assistant Chatbot -->
+  <!-- Watson Assistant Chat Embed -->
   <script>
     window.watsonAssistantChatOptions = {
       integrationID: "8f366cde-13df-4c66-b5f0-bc81c01d5d1f",
