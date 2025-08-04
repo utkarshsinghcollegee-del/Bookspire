@@ -1,89 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookspire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f5f5f5;
+      background: #f4f4f4;
       color: #333;
     }
     header {
-      background: #4b0082;
+      background-color: #673ab7;
       color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .container {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    .card h2 {
-      color: #4b0082;
-      margin-top: 0;
-    }
-    .btn {
-      background-color: #4b0082;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    footer {
-      background: #eee;
       padding: 1rem;
       text-align: center;
-      font-size: 0.9rem;
+    }
+    nav {
+      background-color: #4527a0;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .section {
+      padding: 2rem;
+      background: white;
+      margin: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #673ab7;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>📚 Bookspire</h1>
-    <p>Your personalized book recommendation assistant</p>
+    <h1>Bookspire</h1>
+    <p>Your Personal Book Recommendation Assistant</p>
   </header>
   
-  <div class="container">
-    <div class="card">
-      <h2>Discover New Reads</h2>
-      <p>Tell us what you like — genres, authors, or themes — and we’ll recommend books you’ll love!</p>
-      <a href="#" class="btn">Get Recommendations</a>
-    </div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#recommendations">Recommendations</a>
+    <a href="#about">About</a>
+  </nav>
 
-    <div class="card">
-      <h2>Explore by Genre</h2>
-      <p>From thrilling mysteries to heartwarming romances, browse hand-picked selections by category.</p>
-      <a href="#" class="btn">Browse Genres</a>
-    </div>
+  <section class="hero">
+    <h1>Discover Books You’ll Love</h1>
+  </section>
 
-    <div class="card">
-      <h2>Ask Bookspire</h2>
-      <p>Need help choosing your next read? Chat with our assistant now.</p>
-      <a href="#" class="btn">Start Chat</a>
-    </div>
-  </div>
+  <section id="features" class="section">
+    <h2>Features</h2>
+    <ul>
+      <li>AI-powered book recommendations</li>
+      <li>Genre and mood-based suggestions</li>
+      <li>Author-specific book lists</li>
+    </ul>
+  </section>
+
+  <section id="recommendations" class="section">
+    <h2>Top Picks</h2>
+    <p>Get personalized suggestions by chatting with our assistant!</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Bookspire</h2>
+    <p>Bookspire helps readers find the perfect book tailored to their tastes. Powered by natural language understanding and smart categorization, it makes discovering new reads seamless and enjoyable.</p>
+  </section>
 
   <footer>
-    &copy; 2025 Bookspire. All rights reserved.
+    <p>&copy; 2025 Bookspire | Made with ❤️</p>
   </footer>
 
+  <!-- Watson Assistant Chat Script -->
   <script>
     window.watsonAssistantChatOptions = {
-      integrationID: "5fe3b084-59d6-41d0-a6d7-41984362151f", // The ID of this integration.
+      integrationID: "21773892-4b64-41e1-94f5-54c5fe4d5692", // The ID of this integration.
       region: "eu-de", // The region your integration is hosted in.
       serviceInstanceID: "1c647a75-9336-4083-ac04-42f96de7777a", // The ID of your service instance.
       onLoad: async (instance) => { await instance.render(); }
@@ -94,6 +111,6 @@
       document.head.appendChild(t);
     });
   </script>
+
 </body>
 </html>
-
